@@ -28,7 +28,7 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+          `https://opscharlotte.wpengine.com//graphql`,
       },
     },
 
@@ -54,6 +54,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-scroll-reveal`,
+    'gatsby-plugin-page-transitions',
     {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,
