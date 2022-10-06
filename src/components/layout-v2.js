@@ -4,6 +4,11 @@ import PropTypes from "prop-types"
 import styled from 'styled-components'
 import PageTransition from 'gatsby-plugin-page-transitions'
 
+import StickyLogo from "../components/sticky-logo"
+import HeaderLogo from "../components/header-logo"
+
+import Footer from "../components/footer"
+
 import "../css/slick.css"
 import "../css/slick-theme.css"
 
@@ -30,6 +35,7 @@ class Layout extends Component {
         }
         return (
             <FullPage>
+                <StickyLogo/>
                 <MainLayout className={headerName}>
 
                     <HeaderMain>
@@ -37,12 +43,12 @@ class Layout extends Component {
                             <Link
                             to="/"
                             >
-                            <p>logo here</p>
+                            <HeaderLogo/>
                             </Link>
                         </MobileLogo>
                         <MenuRight>
                             <button onClick={() => this.toggleMenu()} aria-label="Open">
-                                <p>Menu</p>
+                                <p>menu</p>
                                 <Hamburger>
                                     <div></div>
                                     <div></div>
@@ -64,9 +70,7 @@ class Layout extends Component {
                         <p>Sidebar menu here</p>
                     </SidebarMenu>
 
-                    <FooterSection>
-                        <p>Footer content here</p>
-                    </FooterSection>
+                    <Footer/>
 
                 </MainLayout>
             </FullPage>
@@ -104,8 +108,8 @@ const MobileLogo = styled.div`
   visibility: hidden;
   padding-right: 15px;
   .gatsby-image-wrapper {
-    width: 100px;
-    height: 72px;
+    width: 90px;
+    height: 34px;
     img {
       margin-bottom: 0;
     }
@@ -137,12 +141,12 @@ const MenuRight = styled.div`
     }
   }
   p {
-    font-family: "Bodoni Classic";
-    font-size: 15px;
-    line-height: 1.3;
+    font-family: Raleway;
+    font-size: 12px;
+    line-height: 15px;
     font-weight: 700;
-    color: #896d49;
-    margin-bottom: 0;
+    color: rgb(238, 238, 238);
+    margin-bottom: 0px;
     margin-left: -1px;
   }
 `
@@ -156,7 +160,7 @@ const Hamburger = styled.div`
   div {
     width: 100%;
     height: 1px;
-    background-color: #896d49;
+    background-color: #fff;
   }
 `
 

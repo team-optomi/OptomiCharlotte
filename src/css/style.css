@@ -148,6 +148,34 @@
   font-display: swap;
 } 
 
+/* Rotate animation */
+
+.rotating {
+  animation: rotation 200s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(-359deg);
+  }
+}
+
+.circle-rotating {
+  animation: circleRotation 50s infinite linear;
+}
+
+@keyframes circleRotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+
 /* HTML elements */
 
 *,
