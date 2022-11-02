@@ -6,6 +6,7 @@ import PageTransition from 'gatsby-plugin-page-transitions'
 
 import StickyLogo from "../components/sticky-logo"
 import HeaderLogo from "../components/header-logo"
+import SideMainMenu from "../components/sidebar-menu"
 
 import Footer from "../components/footer"
 
@@ -67,7 +68,7 @@ class Layout extends Component {
 
                     <SidebarMenu>
                         <button onClick={() => this.toggleMenu()} aria-label="Close">X</button>
-                        <p>Sidebar menu here</p>
+                        <SideMainMenu/>
                     </SidebarMenu>
 
                     <Footer/>
@@ -95,6 +96,7 @@ const HeaderMain = styled.div`
   justify-content: flex-end;
   align-items: center;
   z-index: 100;
+  transition-duration: .3s;
   @media(max-width:768px) {
     background-color: #000;
     justify-content: space-between;
@@ -180,9 +182,9 @@ const SidebarMenu = styled.div`
     right: -270px;
     background-color: #1b1b1b;
     transition-duration: .3s;
-    z-index: 10;
+    z-index: 100;
     button {
-      font-family: "Kessel Heavy";
+      font-family: "Helvetica Thin";
       position: absolute;
       top: 29px;
       right: 25px;
@@ -208,10 +210,11 @@ const MainLayout = styled.div`
     ${SidebarMenu} {
       right: 0;
     }
+    ${HeaderMain} {
+      padding-right: 270px;
+    }
   }
 `
-
-const FooterSection = styled.footer``
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
