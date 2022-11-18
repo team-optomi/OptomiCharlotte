@@ -76,7 +76,7 @@ const AwardsMain = styled.div`
                     width: 50px;
                     height: 50px;
                     border-right: 25px solid transparent;
-                    border-bottom: 40px solid #aaa;
+                    border-bottom: 40px solid #898c8e;
                     border-left: 25px solid transparent;
                     opacity: 0;
                     visibility: hidden;
