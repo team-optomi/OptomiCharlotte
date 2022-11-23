@@ -56,6 +56,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-scroll-reveal`,
     'gatsby-plugin-page-transitions',
+    `gatsby-plugin-styled-components`,
     {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,
