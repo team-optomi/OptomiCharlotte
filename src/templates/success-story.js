@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
@@ -22,17 +23,17 @@ const SuccessStoryTemplate = ({ data: { post } }) => {
 
   return (
     <Layout>
-      <Seo title={post.title} description={"need description"} />
+      <Seo 
+      title={post.seo.title} 
+      description={post.seo.metaDesc}
+      />
 
-      <article
+      <Article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{parse(post.title)}</h1>
-
-          <p>{post.date}</p>
 
           {/* if we have a featured image for this post let's display it */}
           {featuredImage?.data && (
@@ -42,19 +43,79 @@ const SuccessStoryTemplate = ({ data: { post } }) => {
               style={{ marginBottom: 50 }}
             />
           )}
+          <div class="header-content">
+            <h1 itemProp="headline">{parse(post.title)}</h1>
+            <p>{post.lastEditedBy.node.name}</p>
+          </div>
+          
         </header>
 
         {!!post.content && (
           <section itemProp="articleBody">{parse(post.content)}</section>
         )}
 
-        <hr />
-
-      </article>
+      </Article>
 
     </Layout>
   )
 }
+
+const Article = styled.article`
+  header {
+    height: 350px;
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+    .gatsby-image-wrapper {
+      position: absolute;
+      height: 350px;
+      width: 100%;
+      img {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .header-content {
+      position: relative;
+      max-width: 1240px;
+      width: 100%;
+      padding: 0 20px;
+      padding-bottom: 0px;
+      margin: 0 auto;
+      h1 {
+        font-family: "Helvetica Thin";
+        color: rgb(255,255,255);
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 1.3;
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+      p {
+          font-family: BonVivant;
+          color: #298fc2;
+          font-size: 42px;
+          position: relative;
+          top: -40px;
+      }
+    }
+  }
+  section {
+    max-width: 1240px;
+    width: 100%;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    p, li {
+      font-family: "Helvetica Thin";
+      color: #898c8e;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+  }
+`
 
 export default SuccessStoryTemplate
 
@@ -63,9 +124,18 @@ export const pageQuery = graphql`
     $id: String!
   ) {
     post: wpSuccessStory(id: { eq: $id }) {
+      seo {
+        title
+        metaDesc
+      }
       id
       content
       title
+      lastEditedBy {
+        node {
+          name
+        }
+      }
       date(formatString: "MMMM DD, YYYY")
       featuredImage {
         node {
