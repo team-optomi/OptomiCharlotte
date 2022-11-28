@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout-v2"
 import Seo from "../components/seo"
-import AwardsSection from "../components/award-section"
+import JobsSection from "../components/jobs-section"
 
-const AwardsPage = ({ data: { queryContent } }) => {
+const CharlotteJobsPage = ({ data: { queryContent } }) => {
 
     return(
         <Layout>
@@ -16,9 +17,13 @@ const AwardsPage = ({ data: { queryContent } }) => {
             />
             <PageMain>
                 <div class="title-row">
-                    <h1>OUR <span class="blue bonvivant">Awards</span></h1>
+                    <GatsbyImage
+                    image={queryContent.featuredImage.node.localFile.childImageSharp.gatsbyImageData}
+                    alt={queryContent.featuredImage.node.localFile.title}
+                    />
+                    <h1>CHARLOTTE JOB OPENINGS</h1>
                 </div>
-                <AwardsSection/>
+                <JobsSection/>
             </PageMain>
         </Layout>
     )
@@ -26,7 +31,6 @@ const AwardsPage = ({ data: { queryContent } }) => {
 }
 
 const PageMain = styled.section`
-    padding: 50px 20px;
     h1 {
         font-family: "Helvetica Regular";
         color: #898c8e;
@@ -44,7 +48,7 @@ const PageMain = styled.section`
     }
 `
 
-export default AwardsPage
+export default CharlotteJobsPage
 
 export const pageQuery = graphql`
     query {
@@ -52,6 +56,20 @@ export const pageQuery = graphql`
             seo {
                 title
                 metaDesc
+            }
+            featuredImage {
+                node {
+                  title
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 1800
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                      )
+                    }
+                  }
+                }
             }
         }
     }
