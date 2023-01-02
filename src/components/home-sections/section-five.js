@@ -75,6 +75,9 @@ const HomeSectionFive = () => {
 const MainSection = styled.section`
     padding-top: 50px;
     padding-bottom: 0px;
+    h2 {
+        line-height: 1.8;
+    }
     .s5-content {
         text-align: center;
     }

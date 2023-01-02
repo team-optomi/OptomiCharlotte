@@ -88,6 +88,10 @@ const MainSection = styled.section`
             width: 30%;
             padding: 0px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             .gatsby-image-wrapper {
                 max-width: 200px;
                 max-height: 120px;
@@ -126,6 +130,7 @@ const MainSection = styled.section`
                 font-size: 14px;
                 letter-spacing: 2px;
                 display: inline-block;
+                margin-top: auto;
             }
             &:nth-child(1) {
                 transition-delay: .3s;

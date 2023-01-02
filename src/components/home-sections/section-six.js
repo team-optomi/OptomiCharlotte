@@ -38,7 +38,7 @@ const HomeSectionSix = () => {
         centerMode: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 3000,
     }
 
     return(

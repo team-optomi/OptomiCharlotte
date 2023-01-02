@@ -37,7 +37,7 @@ const HomeSectionEight = () => {
             <div 
             data-sal="fade"
             data-sal-duration="1000"
-            data-sal-delay="300"
+            data-sal-delay="800"
             data-sal-easing="ease"
             className={"s8-content"} 
             dangerouslySetInnerHTML={{ __html: data.queryContent.homeSection.homeS8Content}} />
