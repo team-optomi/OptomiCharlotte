@@ -148,6 +148,169 @@ const MainSection = styled.section`
             display: inline-block;
         }
     }
+    @media(max-width:1200px) {
+        .s8-content {
+            margin-bottom: 0;
+        }
+        .s8-values {
+            max-width: 820px;
+            height: 470px;
+            .s8-value {
+                &:nth-child(1) {
+                    max-width: 471px;
+                    top: -90px;
+                    left: 35px;
+                }
+                &:nth-child(2) {
+                    max-width: 500px;
+                    right: 73px;
+                    top: -37px;
+                }
+                &:nth-child(3) {
+                    max-width: 500px;
+                    top: 52px;
+                    left: -5px;
+                }
+                &:nth-child(4) {
+                    max-width: 500px;
+                    right: -38px;
+                    top: 44px;
+                }
+                &:nth-child(5) {
+                    max-width: 500px;
+                    top: 152px;
+                    right: 13px;
+                }
+                &:nth-child(6) {
+                    max-width: 314px;
+                    top: 165px;
+                    left: 40px;
+                }
+                &:nth-child(7) {
+                    max-width: 550px;
+                    top: 207px;
+                    left: 222px;
+                }
+                &:nth-child(8) {
+                    max-width: 500px;
+                    top: 306px;
+                    left: 134px;
+                }
+            }
+        }
+    }
+    @media(max-width:991px) {
+        .s8-values {
+            max-width: 620px;
+            height: 370px;
+            .s8-value {
+                &:nth-child(1) {
+                    max-width: 371px;
+                    top: -86px;
+                    left: 24px;
+                }
+                &:nth-child(2) {
+                    max-width: 400px;
+                    right: 28px;
+                    top: -43px;
+                }
+                &:nth-child(3) {
+                    max-width: 400px;
+                    top: 31px;
+                    left: -10px;
+                }
+                &:nth-child(4) {
+                    max-width: 400px;
+                    right: -56px;
+                    top: 21px;
+                }
+                &:nth-child(5) {
+                    max-width: 400px;
+                    top: 109px;
+                    right: -14px;
+                }
+                &:nth-child(6) {
+                    max-width: 264px;
+                    top: 126px;
+                    left: 40px;
+                }
+                &:nth-child(7) {
+                    max-width: 450px;
+                    top: 161px;
+                    left: 195px;
+                }
+                &:nth-child(8) {
+                    max-width: 400px;
+                    top: 241px;
+                    left: 130px;
+                }
+            }
+        }
+    }
+    @media(max-width:767px) {
+        .s8-values {
+            max-width: 440px;
+            height: 280px;
+            .s8-value {
+                &:nth-child(1) {
+                    max-width: 271px;
+                    top: -75px;
+                    left: 5px;
+                }
+                &:nth-child(2) {
+                    max-width: 300px;
+                    right: 17px;
+                    top: -43px;
+                }
+                &:nth-child(3) {
+                    max-width: 300px;
+                    top: 19px;
+                    left: -28px;
+                }
+                &:nth-child(4) {
+                    max-width: 300px;
+                    right: -46px;
+                    top: 10px;
+                }
+                &:nth-child(5) {
+                    max-width: 300px;
+                    top: 79px;
+                    right: -14px;
+                }
+                &:nth-child(6) {
+                    max-width: 214px;
+                    top: 88px;
+                    left: -12px;
+                }
+                &:nth-child(7) {
+                    max-width: 350px;
+                    top: 119px;
+                    left: 116px;
+                }
+                &:nth-child(8) {
+                    max-width: 300px;
+                    top: 183px;
+                    left: 73px;
+                }
+            }
+        }
+    }
+    @media(max-width:500px) {
+        .s8-values {
+            max-width: 440px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .s8-value {
+                position: relative;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+            }
+        }
+    }
 `
 
 export default HomeSectionEight

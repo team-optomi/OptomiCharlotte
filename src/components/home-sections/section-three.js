@@ -123,6 +123,40 @@ const MainSection = styled.section`
             }
         }
     }
+    @media(max-width:1340px) {
+        .s3-flex-row {
+            flex-wrap: wrap;
+            justify-content: center;
+            .s3-flex-col {
+                width: 25%;
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 13px;
+                }
+            }   
+        }
+    }
+    @media(max-width:767px) {
+        .s3-flex-row {
+            .s3-flex-col {
+                width: 33.33%;
+            }
+        }
+    }
+    @media(max-width:600px) {
+        .s3-flex-row {
+            .s3-flex-col {
+                width: 50%;
+            }
+        }
+    }
+    @media(max-width:400px) {
+        .s3-flex-row {
+            .s3-flex-col {
+                width: 100%;
+            }
+        }
+    }
 `
 
 export default HomeSectionThree

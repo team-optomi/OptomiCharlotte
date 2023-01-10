@@ -39,6 +39,32 @@ const HomeSectionSix = () => {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 4,
+              }
+            },
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                  slidesToShow: 1,
+                }
+              }
+          ]
     }
 
     return(

@@ -92,6 +92,15 @@ const MainSection = styled.section`
     .s13-button {
         text-align: center;
     }
+    @media(max-width:767px) {
+        .s13-gallery {
+            flex-wrap: wrap;
+            height: auto;
+            .s13-image {
+                width: 100%;
+            }
+        }
+    }
 `
 
 export default HomeSectionThirteen

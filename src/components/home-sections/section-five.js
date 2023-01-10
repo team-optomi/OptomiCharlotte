@@ -39,6 +39,26 @@ const HomeSectionFive = () => {
         infinite: false,
         slidesToShow: 4,
         slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
     }
 
     return(
@@ -76,7 +96,7 @@ const MainSection = styled.section`
     padding-top: 50px;
     padding-bottom: 0px;
     h2 {
-        line-height: 1.8;
+        line-height: 1.8 !important;
     }
     .s5-content {
         text-align: center;
@@ -92,6 +112,7 @@ const MainSection = styled.section`
                 position: absolute;
                 z-index: 1;
                 height: 100%;
+                width: 100%;
             }
             .s5-slide-content {
                 position: relative;
@@ -153,6 +174,12 @@ const MainSection = styled.section`
             background-color: #298fc2;
             color: #fff;
             text-decoration: none;
+        }
+    }
+    @media(max-width:900px) {
+        .s5-slider .s5-slide .s5-slide-content {
+            max-width: 400px;
+            margin: 0 auto;
         }
     }
 `

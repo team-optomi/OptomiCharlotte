@@ -196,6 +196,9 @@ const FooterLogoCol = styled.div`
     }
     @media(max-width:800px) {
         max-width: 440px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .gatsby-image-wrapper {
             margin-left: auto;
             margin-right: auto;

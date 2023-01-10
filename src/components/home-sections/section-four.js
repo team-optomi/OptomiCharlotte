@@ -143,6 +143,25 @@ const MainSection = styled.section`
             }
         }
     }
+    @media(max-width:767px) {
+        .s4-flex-row {
+            flex-wrap: wrap;
+            justify-content: center;
+            .s4-flex-col {
+                width: 50%;
+                padding: 0 20px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media(max-width:600px) {
+        .s4-flex-row {
+            .s4-flex-col {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
 `
 
 export default HomeSectionFour
