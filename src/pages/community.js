@@ -174,6 +174,20 @@ const TopRow = styled.section`
             }
         }
     }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .community-image-1 {
+            max-width: 300px;
+        }
+        .community-image-4 {
+            margin-bottom: 0;
+        }
+        .community-image-7 {
+            margin-top: 0;
+        }
+    }
 `
 
 const MiddleRow = styled.section`
@@ -198,6 +212,14 @@ const MiddleRow = styled.section`
                     line-height: 1.3;
                     margin-bottom: 0px;
                 }
+            }
+        }
+    }
+    @media(max-width:767px) {
+        .flex-row {
+            flex-wrap: wrap;
+            > div {
+                width: 100%;
             }
         }
     }
@@ -419,6 +441,64 @@ const BottomRow = styled.section`
     .community-image-32 {
         grid-column: 11 / 15;
         grid-row: 38 / 41;
+    }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        .community-image-3 {
+            margin-bottom: 0px;
+        }
+        .community-image-4 {
+            margin-bottom: 0px;
+        }
+        .community-image-5 {
+            padding-top: 0px;
+        }
+        .community-image-7 {
+            padding-top: 0px;
+        }
+        .community-image-8 {
+            margin-bottom: 0px;
+        }
+        .community-image-9 {
+            margin-bottom: 0px;
+        }
+        .community-image-10 {
+            margin-top: 0px;
+            padding-bottom: 0px;
+        }
+        .community-image-11 {
+            padding-top: 0px;
+            margin-bottom: 0px;
+        }
+        .community-image-12 {
+            margin-top: 0px;
+        }
+        .community-image-13 {
+            padding-top: 0px;
+        }
+        .community-image-16 {
+            padding-bottom: 0px;
+        }
+        .community-image-17 {
+            margin-top: 0px;
+        }
+        .community-image-18 {
+            padding-bottom: 0px;
+        }
+        .community-image-20 {
+            padding-bottom: 0px;
+        }
+        .community-image-21 {
+            margin-top: 0px;
+        }
+        .community-image-23 {
+            margin-top: 0px;
+            padding-bottom: 0px;
+        }
+        .community-image-26 {
+            margin-top: 0px;
+        }
     }
 `
 

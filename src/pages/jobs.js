@@ -123,6 +123,20 @@ const SectionOne = styled.section`
             transition-duration: 0.3s;
         }
     }
+    @media(max-width:767px) {
+        .jobs-intro {
+            h1 {
+                font-size: 35px;
+                span {
+                    font-size: 60px;
+                    left: -26px;
+                }
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
 `
 
 const SectionTwo = styled.section`
@@ -193,6 +207,49 @@ const SectionTwo = styled.section`
                 position: relative;;
                 display: inline-block;
                 left: -35px;
+            }
+        }
+    }
+    @media(max-width:991px) {
+        .flex-row {
+            .job-col {
+                padding-left: 80px;
+                .job-description {
+                    h2 {
+                        font-size: 20px;
+                    }
+                    p.bonvivant {
+                        font-size: 24px;
+                    }
+                    ul {
+                        li {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:767px) {
+        .flex-row {
+            .job-col {
+                width: 100%;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                .job-description {
+                    h2 {
+                        font-size: 20px;
+                    }
+                    p.bonvivant {
+                        font-size: 24px;
+                    }
+                    ul {
+                        li {
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
         }
     }

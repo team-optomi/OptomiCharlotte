@@ -81,6 +81,8 @@ const PageMain = styled.section`
             font-family: "Helvetica Regular";
             color: #898c8e;
             font-weight: 100;
+            padding-top: 60px;
+            margin-top: 0;
             margin-bottom: 45px;
             text-align: center;
             span {
@@ -123,6 +125,16 @@ const PageMain = styled.section`
         }
         .right-col {
             width: 50%;
+        }
+    }
+    @media(max-width:767px) {
+        .row-one {
+            .gallery {
+                flex-wrap: wrap;
+                .gatsby-image-wrapper {
+                    width: 50%;
+                }
+            }
         }
     }
 `

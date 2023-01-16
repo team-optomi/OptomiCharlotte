@@ -132,6 +132,20 @@ const MainSection = styled.section`
             }
         }
     }
+    @media(max-width:680px) {
+        .flex-row {
+            .s10-image {
+                display: none;
+            }
+            .s10-slider {
+                width: 100%;
+                .slick-prev,
+                .slick-next {
+                    display: none;
+                }
+            }
+        }
+    }
 `
 
 export default HomeSectionTen

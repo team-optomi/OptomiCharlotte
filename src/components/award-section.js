@@ -163,6 +163,80 @@ const AwardsMain = styled.div`
             } 
         }
     }
+    @media(max-width: 1200px) {
+        max-width: 900px;
+        .award-col {
+            .award-image {
+                height: 280px;
+                width: 280px;
+                .gatsby-image-wrapper {
+                    img {
+                        max-width: 280px;
+                        max-height: 280px;
+                    }
+                }
+            }
+            .award-description {
+                h2 {
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @media(max-width: 900px) {
+        max-width: 700px;
+        .award-col {
+            .award-image {
+                height: 200px;
+                width: 200px;
+                .gatsby-image-wrapper {
+                    img {
+                        max-width: 200px;
+                        max-height: 200px;
+                    }
+                }
+            }
+            .award-description {
+                &.active {
+                    max-height: 500px;
+                    &:before {
+                        max-height: 500px;
+                    }
+                    &:after {
+                        max-height: 500px;
+                    }
+                }
+            }
+            &.active {
+                margin-bottom: 500px;
+            }
+        }
+    }
+    @media(max-width:767px) {
+        max-width: 400px;
+        .award-col {
+            width: 50%;
+        }
+    }
+    @media(max-width:480px) {
+        max-width: 360px;
+        .award-col {
+            .award-image {
+                height: 180px;
+                width: 180px;
+                .gatsby-image-wrapper {
+                    img {
+                        max-width: 180px;
+                        max-height: 180px;
+                    }
+                }
+            }
+        }
+    }
 `
 
 

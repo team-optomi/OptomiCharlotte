@@ -228,6 +228,13 @@ const RowOne = styled.section`
             }
         }
     }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+            padding: 20px;
+        }
+    }
 `
 
 const RowTwo = styled.section`
@@ -257,6 +264,10 @@ const RowTwo = styled.section`
                 height: 100%;
             }
         }
+    }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
     }
 `
 
@@ -343,6 +354,20 @@ const RowThree = styled.section`
             }
         }
     }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+            p {
+                span.quote-start {
+                    left: -25px;
+                }
+                span.quote-end {
+                    right: -25px;
+                }
+            }
+        }
+    }
 `
 
 const RowFour = styled.section`
@@ -408,6 +433,23 @@ const RowFour = styled.section`
             }
         }
     }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+            .content {
+                p {
+                    max-width: 100%;
+                    span.quote-start {
+                        left: -25px;
+                    }
+                    span.quote-end {
+                        right: -25px;
+                    }
+                }
+            }
+        }
+    }
 `
 
 const RowFive = styled.section`
@@ -433,6 +475,10 @@ const RowFive = styled.section`
                 height: 100%;
             }
         }
+    }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
     }
 `
 
@@ -500,6 +546,22 @@ const RowSix = styled.section`
             height: 100%;
             .gatsby-image-wrapper {
                 height: 100%;
+            }
+        }
+    }
+    @media(max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+            padding: 20px 40px;
+            p {
+                max-width: 100%;
+                span.quote-start {
+                    left: -25px;
+                }
+                span.quote-end {
+                    right: -25px;
+                }
             }
         }
     }

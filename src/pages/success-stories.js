@@ -47,6 +47,8 @@ const MainSection = styled.section`
             font-family: "Helvetica Regular";
             color: #898c8e;
             font-weight: 100;
+            padding-top: 60px;
+            margin-top: 0;
             margin-bottom: 45px;
             text-align: center;
             span {
@@ -120,6 +122,29 @@ const MainSection = styled.section`
                     color: #298fc2;
                     font-size: 42px;
                 }
+            }
+        }
+    }
+    @media(max-width:991px) {
+        .post-grid {
+            .success-post {
+                width: 50%;
+            }
+        }
+    }
+    @media(max-width:767px) {
+        .post-grid {
+            .success-post {
+                .success-post-content {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @media(max-width:680px) {
+        .post-grid {
+            .success-post {
+                width: 100%;
             }
         }
     }
